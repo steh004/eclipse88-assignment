@@ -46,8 +46,7 @@ namespace CarParkFinder.API.Services
                     Latitude = x.CarPark.Latitude,
                     Longitude = x.CarPark.Longitude,
                     TotalLots = x.Availability.TotalLots,
-                    AvailableLots = x.Availability.AvailableLots,
-                    Distance = x.Distance  // Add this property temporarily for testing
+                    AvailableLots = x.Availability.AvailableLots
                 })
                 .ToList();
 

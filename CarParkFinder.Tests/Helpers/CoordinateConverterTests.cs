@@ -11,8 +11,7 @@ namespace CarParkFinder.Tests.Helper
             // This is the origin point in SVY21
             var (lat, lng) = CoordinateConverter.Convert(38744.572, 28001.642);
 
-            // These are the actual values your converter returns
-            Assert.InRange(lat, 1.3735, 1.3736);  // Adjusted based on actual output
+            Assert.InRange(lat, 1.3735, 1.3736); 
             Assert.InRange(lng, 103.8333, 103.8335);
         }
 
@@ -36,7 +35,6 @@ namespace CarParkFinder.Tests.Helper
 
             var (lat, lng) = CoordinateConverter.Convert(northing, easting);
 
-            // You can still assert it's a valid coordinate range
             Assert.InRange(lat, -90, 90);
             Assert.InRange(lng, -180, 180);
         }

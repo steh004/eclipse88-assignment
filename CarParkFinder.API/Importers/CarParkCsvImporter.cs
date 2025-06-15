@@ -26,7 +26,7 @@ namespace CarParkFinder.API.Services
                 MissingFieldFound = null
             });
 
-            // ✅ Register the mapping
+            // Register the mapping
             csv.Context.RegisterClassMap<CarParkCsvRecordMap>();
 
             var records = csv.GetRecords<CarParkCsvRecord>();
@@ -54,7 +54,6 @@ namespace CarParkFinder.API.Services
             await _context.SaveChangesAsync();
         }
 
-        // Your existing class for reading CSV fields
         private class CarParkCsvRecord
         {
             public string CarParkNo { get; set; }
@@ -63,7 +62,6 @@ namespace CarParkFinder.API.Services
             public string YCoord { get; set; }
         }
 
-        // ✅ Add this below CarParkCsvRecord
         private sealed class CarParkCsvRecordMap : ClassMap<CarParkCsvRecord>
         {
             public CarParkCsvRecordMap()

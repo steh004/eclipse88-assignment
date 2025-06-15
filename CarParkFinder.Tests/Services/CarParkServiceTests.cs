@@ -36,7 +36,7 @@ namespace CarParkFinder.Tests.Services
                 new CarPark
                 {
                     Id = 1,
-                    CarParkNo = "CP1", // ✅ Add this
+                    CarParkNo = "CP1",
                     Address = "123 Example St",
                     Latitude = 1.3000,
                     Longitude = 103.8000,
@@ -44,7 +44,7 @@ namespace CarParkFinder.Tests.Services
                     {
                         new CarParkAvailability
                         {
-                            CarParkNo = "CP1", // ✅ Match the parent CarParkNo
+                            CarParkNo = "CP1",
                             AvailableLots = 10,
                             TotalLots = 50,
                             RetrievedAt = DateTime.UtcNow

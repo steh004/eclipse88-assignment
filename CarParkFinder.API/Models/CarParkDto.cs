@@ -7,6 +7,5 @@ namespace CarParkFinder.API.Models
         public double Longitude { get; set; }
         public int TotalLots { get; set; }
         public int AvailableLots { get; set; }
-        public double Distance { get; set; }
     }
 }

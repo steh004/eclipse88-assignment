@@ -56,44 +56,71 @@ docker-compose up --build
         "latitude": 1.3126856620262441,
         "longitude": 103.85679299063978,
         "totalLots": 56,
-        "availableLots": 2,
-        "distance": 610.5701926063642
+        "availableLots": 2
     },
     {
         "address": "BLK 31 KELANTAN LANE MSCP",
         "latitude": 1.3131688803661135,
         "longitude": 103.85680055014925,
         "totalLots": 345,
-        "availableLots": 253,
-        "distance": 658.3101832972249
+        "availableLots": 253
     },
     {
         "address": "BLK 665 BUFFALO ROAD BASEMENT CAR PARK",
         "latitude": 1.3129685780542584,
         "longitude": 103.85058569248744,
         "totalLots": 170,
-        "availableLots": 145,
-        "distance": 685.7615822407242
+        "availableLots": 145
     },
     {
         "address": "BLK 638 VEERASAMY ROAD",
         "latitude": 1.3141121463123702,
         "longitude": 103.85535216740251,
         "totalLots": 151,
-        "availableLots": 62,
-        "distance": 704.6448405469349
+        "availableLots": 62
     },
     {
         "address": "BLK 665 BUFFALO ROAD LOADING/UNLOADING BAYS",
         "latitude": 1.3134987238773097,
         "longitude": 103.85070720521064,
         "totalLots": 10,
-        "availableLots": 4,
-        "distance": 727.8873125914995
+        "availableLots": 4
     }
 ]
 ```
 
+## Swagger UI
+
+1. When the program is running, may access Swagger in your browser by passing this URL:
+```bash
+http://localhost:5000/swagger
+```
+2. The GET /carparks/nearest API can be testing by filling in the inputs in the swagger URL
+
+3. Some sample inputs 
+```text
+Orchard Road
+latitude=1.3048
+longitude=103.8318
+
+Tampines MRT
+latitude=1.3530
+longitude=103.9455
+
+Jurong East
+latitude=1.3331
+longitude=103.7422
+
+Woodlands
+latitude=1.4360
+longitude=103.7865
+
+Changi Airport
+latitude=1.3644
+longitude=103.9915
+```
+
+### 
 ---
 
 ## Unit Testing
@@ -124,3 +151,4 @@ reportgenerator -reports:"TestResults/**/coverage.cobertura.xml" -targetdir:"cov
 - Docker Usage: Chose Docker Compose to ensure reviewers can run the API and PostgreSQL easily without manual setup.
 - Live API Dependency: Using real-time availability from Data.gov.sg introduces a dependency but simulates realistic scenarios.
 - Performance: For simplicity, car park distances are calculated in-memory. In production, geospatial indexes or spatial queries should be considered.
+- Solutions and guidance in the asssignment completion was assisted by querying questions and concepts regarding the assignment from ChatGPT.
