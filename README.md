@@ -103,11 +103,6 @@ docker-compose up --build
 cd CarParkFinder.Tests
 ```
 
-### 1. Redirect to CarParkFinder.Tests directory
-```bash
-cd CarParkFinder.Tests
-```
-
 ### 2. Run the commands below to trigger the test and report
 ```bash
 dotnet clean
